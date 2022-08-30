@@ -16,7 +16,7 @@
 3. Selezionare tutti gli studenti che hanno più di 30 anni
 ==> SELECT * 
     FROM `students` 
-    WHERE (2022-YEAR(`date_of_birth`))>30
+    WHERE TIMESTAMPDIFF(YEAR, `students`.`date_of_birth`, CURDATE()) > 30
     => Showing rows 0 - 24 (3338 total, Query took 0.0003 seconds.)
 
 
@@ -87,7 +87,7 @@ laurea (286)
     => Showing rows 0 - 24 (4078 total, Query took 0.0003 seconds.)
 
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
-==> SELECT COUNT(id)
+==> SELECT `department_id`, COUNT(id)
     FROM `degrees`
     GROUP BY `department_id`
     =>COUNT(id)
