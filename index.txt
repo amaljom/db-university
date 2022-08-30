@@ -1,3 +1,4 @@
+    ESERCIZI SELECT
 
 1. Selezionare tutti gli studenti nati nel 1990 (160)
 
@@ -34,3 +35,22 @@ laurea (286)
     WHERE date(`date`)='2020/06/20'
     AND hour(`hour`)>14
     =>Showing rows 0 - 13 (14 total, Query took 0.0038 seconds.)
+
+6. Selezionare tutti i corsi di laurea magistrale (38)
+==> SELECT *
+    FROM `degrees`
+    WHERE `level`='magistrale'
+    => Showing rows 0 - 24 (38 total, Query took 0.0011 seconds.)
+
+7. Da quanti dipartimenti è composta l'università? (12)
+==> SELECT COUNT(`name`)
+    FROM `departments`
+    =>COUNT(`name`)
+                12
+
+
+8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
+==> SELECT * 
+    FROM `teachers`
+    WHERE `phone` IS NULL
+    =>Showing rows 0 - 24 (50 total, Query took 0.0003 seconds.)
