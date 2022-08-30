@@ -55,6 +55,12 @@ laurea (286)
     WHERE `phone` IS NULL
     =>Showing rows 0 - 24 (50 total, Query took 0.0003 seconds.)
 
+   
+   
+   
+   
+   
+   
     ESERCIZI GROUP BY
 
 1. Contare quanti iscritti ci sono stati ogni anno
@@ -71,15 +77,14 @@ laurea (286)
 ==> SELECT COUNT(id)
     FROM `teachers`
     GROUP BY `office_address`
+    =>Showing rows 0 - 24 (29 total, Query took 0.0006 seconds.)
 
 
 3. Calcolare la media dei voti di ogni appello d'esame
 ==> SELECT AVG(`vote`)
     FROM `exam_student`
     GROUP BY(`exam_id`)
-    =>  SELECT AVG(`vote`)
-        FROM `exam_student` 
-        GROUP BY(`exam_id`)
+    => Showing rows 0 - 24 (4078 total, Query took 0.0003 seconds.)
 
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
 ==> SELECT COUNT(id)
