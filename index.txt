@@ -50,7 +50,7 @@ laurea (286)
 
 
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
-==> SELECT * 
+==> SELECT COUNT(id) 
     FROM `teachers`
     WHERE `phone` IS NULL
     =>Showing rows 0 - 24 (50 total, Query took 0.0003 seconds.)
